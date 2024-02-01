@@ -1,0 +1,50 @@
+{
+  "name": "express-es6-rest-api",
+  "version": "0.3.0",
+  "description": "Starter project for an ES6 RESTful Express API",
+  "main": "dist",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src\"",
+    "mongo-diff": "cd diffChecker && npm i && cd ../ &&  node --experimental-modules diffChecker/reactDiff.mjs",
+    "build": "./node_modules/.bin/babel src -s -D -d dist",
+    "start": "./node_modules/.bin/babel-node  dist/index",
+    "clean": "./node_modules/.bin/rimraf ./dist",
+    "prebuild": "npm run clean",
+    "test": "eslint src",
+    "lint": "eslint src --fix --ext .js,.jsx . --ignore",
+    "pretty:fix": "npx prettier --write ."
+  },
+  "repository": "developit/express-es6-rest-api",
+  "author": "Jason Miller <jason@developit.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "binaryjs": "^0.2.1",
+    "body-parser": "^1.13.3",
+    "compression": "^1.5.2",
+    "cors": "^2.7.1",
+    "express": "^4.18.2",
+    "get-audio-duration": "^4.0.1",
+    "jade": "^1.11.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.1.1",
+    "morgan": "^1.8.0",
+    "openai": "^4.26.0",
+    "resource-router-middleware": "^0.6.0",
+    "socket.io": "^4.7.4",
+    "wav": "^1.0.2",
+    "wavefile": "^11.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/eslint-parser": "^7.22.5",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.22.5",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^1.9.2",
+    "prettier": "2.8.8"
+  }
+}
